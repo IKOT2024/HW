@@ -53,7 +53,7 @@ function userAge() {
             console.log("Добро пожаловать");
       }
 }
-      userAge();
+userAge();
 
 //5
 function typeСonversion(x) {
@@ -91,32 +91,31 @@ console.log("2 значение :", enterNumber());
 
 
 //7
-function getArea() {
-      return this.width * this.height;
-}
-function getPerimeter() {
-      return this.width * 2 + this.height * 2;
-}
+let circle1 = {
+      radius: 9,
+      getArea() {
+            return Math.PI * Math.pow(this.radius, 2)
+      },
 
-const circle1 = {
-      width: 8,
-      height: 3,
-      radius: 12,
-      getArea: getArea,
-      getPerimeter: getPerimeter
+      getPerimeter() {
+            return 2 * Math.PI * this.radius;
+      }
 };
 
-const circle2 = {
-      width: 9, height: 10,
-      radius: 5,
-      getArea: getArea,
-      getPerimeter: getPerimeter
+let circle2 = {
+      radius: 23,
+
+      getArea() {
+            return Math.PI * Math.pow(this.radius, 2);
+      },
+
+        getPerimeter() {
+            return 2 * Math.PI * this.radius;
+      }
 };
 
 console.log("Circle1 Area:", circle1.getArea());
 console.log("Circle1 Perimeter:", circle1.getPerimeter());
-console.log("Circle1 Area:", circle2.getArea());
-console.log("Circle1 Perimeter:", circle2.getPerimeter());
-
-
+console.log("Circle2 Area:", circle2.getArea());
+console.log("Circle2 Perimeter:", circle2.getPerimeter()); 
 
