@@ -1,1 +1,84 @@
-/*# sourceMappingURL=styleacreating.css.map */
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.top {
+  height: 800px;
+  width: 1400px;
+  background-image: url(pictures__to__create__a__style/picture__for__the__site1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  padding-top: 196px;
+  gap: 24px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  font-family: Montserrat;
+  width: 768px;
+  height: 244px;
+  padding-left: 120px;
+}
+.header__title {
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.header__text {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  max-width: 481px;
+  font-family: Montserrat;
+}
+.header__form {
+  width: 247px;
+  height: 66px;
+  display: flex;
+  border-radius: 30px;
+  background: #000;
+  font-family: Montserrat;
+}
+.header__form:hover {
+  background: #000;
+  color: #FFF;
+}
+.header__form--link {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 65 16 65 16;
+  text-decoration: none;
+  font-family: Montserrat;
+}
+.header__form :hover {
+  background-color: #45a049; /* Темно-зеленый цвет фона при наведении */
+  transform: scale(1.1); /* Увеличиваем размер кнопки при наведении */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Добавляем тень при наведении */
+}
+.header__world {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  font-family: Montserrat;
+}/*# sourceMappingURL=styleacreating.css.map */
