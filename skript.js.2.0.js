@@ -61,11 +61,10 @@ function userAge() {
 userAge();
 
 
-function multiplyIfNumbers(a, b) {
+function IfNumbers(a, z) {
 
     let numerA = Number(a);
-    let numerB = Number(b);
-
+    let numerB = Number(z)
     
     if (isNaN(numerA) || isNaN(numerB)) {
         return 'Одно или оба значения не являются числом';
@@ -75,11 +74,11 @@ function multiplyIfNumbers(a, b) {
     return numerA * numerB;
 }
 
-console.log(multiplyIfNumbers(23, 35)); 
-console.log(multiplyIfNumbers("3", 945)); 
-console.log(multiplyIfNumbers("sfasd", 11)); 
-console.log(multiplyIfNumbers(81, "ergeg")); 
-console.log(multiplyIfNumbers("43", "56")); 
+console.log(IfNumbers(23, 35)); 
+console.log(IfNumbers("3", 945)); 
+console.log(IfNumbers("sfasd", 11)); 
+console.log(IfNumbers(81, "ergeg")); 
+console.log(IfNumbers("43", "56")); 
 
 //6
 function enterNumber() {
@@ -129,12 +128,6 @@ console.log("Circle1 Perimeter:", circle1.getPerimeter());
 console.log("Circle2 Area:", circle2.getArea());
 console.log("Circle2 Perimeter:", circle2.getPerimeter());
 
-
-
-const numbers = [2, 4, 5, 6, 8, 9, 11];
-numbers.forEach((el, index, arr) => {
-    console.log(`${index} : ${el}, массив : ${arr}`);
-});
 
 
 
