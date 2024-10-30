@@ -40,7 +40,7 @@ let doubleSquare = accept * 2;
 console.log(`Удвоенный квадрат числа ${x} равен ${doubleSquare}`);
 
 
-4
+// 4
 function userAge() {
 
     let age = prompt('Сколько вам лет?');
