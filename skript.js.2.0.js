@@ -40,36 +40,46 @@ let doubleSquare = accept * 2;
 console.log(`Удвоенный квадрат числа ${x} равен ${doubleSquare}`);
 
 
-//4
+4
 function userAge() {
 
-      let ageUser = prompt('Сколько вам лет?');
+    let age = prompt('Сколько вам лет?');
+    
+    if (isNaN(age)) {
+        console.log('Введенное значение не является числом')
+    }
+    else if (age < 0) {
+        console.log('Вы ввели неправильное значение');
+    } else if (age <= 12) {
+        console.log('привет друг');
+    } else if (age >= 13) {
+        console.log('Добро пожаловать');
+    }
 
-      if (ageUser < 0) {
-            console.log("Вы ввели неправильное значение");
-      } else if (ageUser >= 0 && ageUser <= 12) {
-            console.log("привет друг");
-      } else if (ageUser >= 13) {
-            console.log("Добро пожаловать");
-      }
 }
+
 userAge();
 
-//5
-function typeСonversion(x) {
-      if (isNaN(x)) {
-            return ('Одно или оба значения не являются числом');
-      }
-      else {
-            return x * x
-      }
 
+function multiplyIfNumbers(a, b) {
+
+    let numerA = Number(a);
+    let numerB = Number(b);
+
+    
+    if (isNaN(numerA) || isNaN(numerB)) {
+        return 'Одно или оба значения не являются числом';
+    }
+
+    
+    return numerA * numerB;
 }
 
-console.log("1 значение :", typeСonversion(112));
-console.log("2 значение :", typeСonversion('abc'));
-
-
+console.log(multiplyIfNumbers(23, 35)); 
+console.log(multiplyIfNumbers("3", 945)); 
+console.log(multiplyIfNumbers("sfasd", 11)); 
+console.log(multiplyIfNumbers(81, "ergeg")); 
+console.log(multiplyIfNumbers("43", "56")); 
 
 //6
 function enterNumber() {
@@ -117,5 +127,18 @@ let circle2 = {
 console.log("Circle1 Area:", circle1.getArea());
 console.log("Circle1 Perimeter:", circle1.getPerimeter());
 console.log("Circle2 Area:", circle2.getArea());
-console.log("Circle2 Perimeter:", circle2.getPerimeter()); 
+console.log("Circle2 Perimeter:", circle2.getPerimeter());
+
+
+
+const numbers = [2, 4, 5, 6, 8, 9, 11];
+numbers.forEach((el, index, arr) => {
+    console.log(`${index} : ${el}, массив : ${arr}`);
+});
+
+
+
+
+
+
 
