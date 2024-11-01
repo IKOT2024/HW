@@ -9,22 +9,24 @@
 }
 
 .top {
-    min-height: 1024px;
+    height: 800px;
+    width: 1400px;
     background-image: url(pictures__to__create__a__style/picture__for__the__site1.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-left: 119px;
 }
 
-
 .header {
-    padding-bottom: 48px;
     padding-top: 196px;
-    display: flex;
-    flex-direction: column;
     gap: 24px;
-    max-width: 768px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    font-family: Montserrat;
+    width: 768px;
+    height: 244px;
+    padding-left: 120px;
 
 
     &__title {
@@ -39,251 +41,44 @@
     }
 
     &__text {
-        color: rgb(32, 32, 39);
-        font-family: Montserrat;
-        font-size: 24px;
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
         font-weight: 300;
         line-height: 32px;
-        letter-spacing: 0px;
-        text-align: left;
-        max-width: 720px;
+        max-width: 481px;
+        font-family: Montserrat;
+    }
 
+    &__form {
+        width: 247px;
+        height: 66px;
+        display: flex;
+        border-radius: 30px;
+        background: #000;
+        font-family: Montserrat;
+    }
+
+
+    &__form--link {
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 13 74 13 74;
+        text-decoration: none;
+        font-family: Montserrat;
     }
 
     &__world {
-        font-size: 24px;
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
         font-weight: 600;
         line-height: 32px;
-        letter-spacing: 0px;
-        text-align: left;
-        color: black;
-    }
-
-
-}
-
-.div {
-    &__button {
-        box-sizing: border-box;
-
-        border-radius: 60px;
-        background: rgb(32, 32, 39);
-        text-decoration: none;
-        width: 247px;
-        height: 66px;
-        transition: 0.5s;
-    }
-
-    &__button:hover {
-        background: #fff;
-        color: #000;
-
-    }
-
-
-    &__button__link {
-        padding: 16px;
-        display: flex;
-        justify-content: center;
-        color: rgb(255, 255, 255);
         font-family: Montserrat;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 141.69%;
-        letter-spacing: 0%;
-        text-align: center;
-        text-decoration: none;
-        transition: 0.5s;
-
-
-
-
-    }
-
-    &__button__link:hover {
-        background: #fff;
-        color: #000;
-        border-radius: 60px;
-
-    }
-}
-
-.product {
-
-    min-height: 1024px;
-    background-image: url(pictures__to__create__a__style/product__game.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding-left: 119px;
-
-
-    &__description__title {
-        color: rgb(255, 255, 255);
-        font-family: Montserrat;
-        font-size: 64px;
-        font-weight: 700;
-        line-height: 78px;
-        letter-spacing: 0px;
-        text-align: left;
-        width: 314px;
-        height: 78px;
-    }
-
-    &__description__text {
-        color: rgb(255, 255, 255);
-        font-family: Montserrat;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 32px;
-        letter-spacing: 0px;
-        text-align: left;
-        max-width: 788px;
-        height: 98px;
     }
 
 
-
-    .game {
-        display: flex;
-        gap: 32px;
-
-        .product1 {
-
-            display: flex;
-            gap: 32px;
-            flex-direction: column;
-
-            &__box {
-                width: 378px;
-                height: 473px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                padding-top: 150px;
-                gap: 10px;
-                padding-left: 32px;
-
-
-            }
-
-            &__game {
-                color: rgb(32, 32, 39);
-                font-family: Montserrat;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 110%;
-                letter-spacing: 0px;
-                text-align: left;
-                border-radius: 30px;
-                flex: none;
-                order: 0;
-                flex-grow: 0;
-                margin: 0px 0px;
-            }
-
-            &__game__name {
-                color: rgb(32, 32, 39);
-                font-family: Montserrat;
-                font-size: 32px;
-                font-weight: 700;
-                line-height: 39px;
-                letter-spacing: 0px;
-                text-align: left;
-            }
-
-            &__guess__the__number {
-                background-image: url(pictures__for__the__second__block/guess__the__number.png);
-                width: 378px;
-                height: 473px;
-                border-radius: 30px;
-                background-repeat: no-repeat;
-                background-size: cover;
-
-            }
-
-
-            &__rock__paper__scissors {
-                background-image: url(pictures__for__the__second__block/rock__paper__scissors.jpeg);
-                width: 378px;
-                height: 551px;
-                border-radius: 30px;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-
-            &__box__game {
-                display: flex;
-                width: 314px;
-                height: 515px;
-                padding-left: 32px;
-                padding-bottom: 32px;
-                flex-direction: column;
-                justify-content: flex-end;
-            }
-
-
-        }
-
-        .product2 {
-
-            display: flex;
-            gap: 32px;
-            flex-direction: column;
-
-            &__simple__arithmetic {
-                background-image: url(pictures__for__the__second__block/simple__arithmetic.jpeg);
-                width: 378px;
-                height: 512px;
-                border-radius: 30px;
-                background-repeat: no-repeat;
-                background-size: cover;
-
-            }
-
-
-            &__simple__quiz {
-                background-image: url(pictures__for__the__second__block/simple__quiz.jpeg);
-                width: 378px;
-                height: 512px;
-                border-radius: 30px;
-                background-repeat: no-repeat;
-                background-size: cover;
-
-            }
-        }
-
-        .product3 {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-
-
-
-            &__flip__text {
-                background-image: url(pictures__for__the__second__block/flip__text.jpeg);
-                width: 378px;
-                height: 473px;
-                border-radius: 30px;
-                background-repeat: no-repeat;
-                background-size: cover;
-
-            }
-
-            &__random__color__generator {
-                background-image: url(pictures__for__the__second__block/random__color__generator.jpeg);
-                width: 378px;
-                height: 551px;
-                border-radius: 30px;
-                background-repeat: no-repeat;
-                background-size: cover;
-
-            }
-
-        }
-    }
 }
