@@ -1,131 +1,190 @@
-// // Урок 2.5
+// 2.6
 
-//1
-function minNumber(a, b) {
-    if (a <= b) {
-        return a;
-    } else {
-        return b;
-    }
+// 1
+const stopDigit = [1, 5, 4, 10, 0, 3];
+for(let i = 0; i < stopDigit.length; i++) {
+    if(stopDigit[i] == 0) break;
+    console.log(stopDigit[i]);
 }
 
-console.log("1 число :", minNumber(4, 8));
-console.log("2 число :", minNumber(6, 6));
-console.log("3 число :", minNumber(110, 170));
+
+
+// вторая вариация решения задачи №1
+let arrayMassiv = [1, 5, 4, 10, 0, 3];
+let i = 0;
+
+while (i < arrayMassiv.length) {
+    if (arrayMassiv[i] === 10) {
+        console.log(arrayMassiv[i]);
+        break;
+    }
+    console.log(arrayMassiv[i]);
+    i++;
+}
 
 
 
 //2
-function retyrnNumber(n) {
-    if (n % 2 == 0) {
-        return 'Число четное'
-    } else {
-        return 'Число нечетное'
-    }
-}
+let findValue = [1, 5, 4, 10, 0, 3];
 
-console.log(retyrnNumber(78));
+let itSeemsToWorkOut = findValue.includes(4);
+
+console.log(itSeemsToWorkOut);
 
 
 
 //3
-let acceptNumber = (x) => x * x;
-
-let x = 3;
-let accept = acceptNumber(x);
-
-console.log(`Квадрат числа ${x} равен ${accept}`);
-
-let doubleSquare = accept * 2;
-console.log(`Удвоенный квадрат числа ${x} равен ${doubleSquare}`);
+const thirdTask = [1, 3, 5, 10, 20];
+const itsDifficultForMe = thirdTask.join(" ")
+console.log(itsDifficultForMe);
 
 
-// 4
-function userAge() {
 
-    let age = prompt('Сколько вам лет?');
-    age = Number(age);
-    if (isNaN(age)) {
-        console.log('Введенное значение не является числом')
+//4
+let numberFour = [];
+
+for (let i = 0; i < 3; i++) {
+    let row = [];
+    for (let j = 0; j < 3; j++) {
+        row.push(1);
     }
-    else if (age < 0) {
-        console.log('Вы ввели неправильное значение');
-    } else if (age <= 12) {
-        console.log('привет друг');
-    } else if (age >= 13) {
-        console.log('Добро пожаловать');
-    }
-
+    numberFour.push(row);
 }
+console.log(numberFour);
 
-userAge();
+
 
 //5
-function IfNumbers(a, z) {
+const doYouWantAnySupplements = [1, 1, 1];
+doYouWantAnySupplements.push(2, 2, 2);
+console.log(doYouWantAnySupplements);
 
-    let numerA = Number(a);
-    let numerB = Number(z)
 
-    if (isNaN(numerA) || isNaN(numerB)) {
-        return 'Одно или оба значения не являются числом';
+
+// 6
+const sortingTheArray = [9, 8, 7, 'a', 6, 5]
+sortingTheArray.sort();
+console.log(sortingTheArray);
+const filtersortingTheArray = sortingTheArray.filter(sorting => sorting !== 'a');
+console.log(filtersortingTheArray);
+
+
+
+// 7
+
+const arrayOfNumbers = [9, 8, 7, 6, 5]; {
+    let youHaveOneTry = prompt("Угадайте число");
+    arrayOfNumbers.includes(9, 8, 7, 6, 5);
+    (youHaveOneTry >= 5 &&  youHaveOneTry <= 9 ? alert('Угадал') : alert('Не угадал'))
     }
+    console.log(arrayOfNumbers);
+    
 
 
-    return numerA * numerB;
+// другой способ решения задачи №7
+let arr = [9, 8, 7, 6, 5];
+let userGuess = prompt("Угадайте число из массива");
+userGuess = Number(userGuess);
+if (arr.includes(userGuess)) {
+    alert("Угадал");
+} else {
+    alert("Не угадал");
+}
+console.log(userGuess)
+
+
+// 8
+const returnTheString = 'abcdef';
+const splitReturnTheString = returnTheString.split("");
+splitReturnTheString.reverse()
+console.log(splitReturnTheString);
+
+
+
+// 9
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combinedArray = [...arr1, ...arr2];
+console.log(combinedArray);
+
+
+
+// 10 
+function generateRandomArray(length) {
+    return Array.from({ length }, () => Math.floor(Math.random() * 10) + 1);
 }
 
-console.log(IfNumbers(23, 35));
-console.log(IfNumbers("3", 945));
-console.log(IfNumbers("sfasd", 11));
-console.log(IfNumbers(81, "ergeg"));
-console.log(IfNumbers("43", "56"));
+const array = generateRandomArray(10);
+console.log('Массив:', array);
 
-//6
-function enterNumber() {
-    let p = prompt('введите пожалуйста число');
-
-    if (isNaN(p)) {
-
-        return ('Переданный параметр не является числом');
-    }
-    else {
-        return p * p;
-
-    }
+for (let i = 0; i < array.length; i++) {
+    const current = array[i];
+    const next = i < array.length - 1 ? array[i + 1] : 'Нет следующего элемента';
+    const sum = next !== 'Нет следующего элемента' ? current + next : current;
+    console.log(`Текущий элемент: ${current}, Следующий элемент: ${next}, Сумма: ${sum}`);
 }
 
-console.log("1 значение :", enterNumber());
-console.log("2 значение :", enterNumber());
+
+
+//11
+function arrayOfIntegralNumbers(will) {
+    return will.map(wil => wil ** 2);
+}
+
+const will = [1, 2, 6, 7, 12, 38];
+const myAnswer = arrayOfIntegralNumbers(will);
+
+console.log(myAnswer);
 
 
 
-//7
-let circle1 = {
-    radius: 9,
-    getArea() {
-        return Math.PI * Math.pow(this.radius, 2)
-    },
+// 12
+function arrayOfStrings (worlds) {
+    return worlds.map(world => world.length);
+}
 
-    getPerimeter() {
-        return 2 * Math.PI * this.radius;
-    }
-};
+const worlds = ['I', 'finished', 'this', 'work', 'at', 'one', 'in', 'the', 'morning']
+const thisWork = arrayOfStrings(worlds);
 
-let circle2 = {
-    radius: 23,
+console.log(thisWork);
 
-    getArea() {
-        return Math.PI * Math.pow(this.radius, 2);
-    },
 
-    getPerimeter() {
-        return 2 * Math.PI * this.radius;
-    }
-};
 
-console.log("Circle1 Area:", circle1.getArea());
-console.log("Circle1 Perimeter:", circle1.getPerimeter());
-console.log("Circle2 Area:", circle2.getArea());
-console.log("Circle2 Perimeter:", circle2.getPerimeter());
+// 13
+function filterNum(numb) {
+    return numb.filter( numb => numb < 0);
+}
+const numb = [1, -13, 3, -0.5, -11, 7, 0, 13, -9, -10];
+const terNum = filterNum(numb);
 
+console.log(terNum);
+
+
+
+// 14
+function findTheQuotient(length) {
+    return Array.from({ length }, () => Math.floor(Math.random() * 10) + 1);
+}
+
+const findThe = findTheQuotient(10)
+console.log( findThe);
+
+const filteredNumbers = findThe.filter(numbers1 => numbers1 % 2 === 0);
+console.log(`исходный массив: ${findThe}, массив с четными  числами: ${filteredNumbers}`);
+
+
+
+// 15
+function findYou(length) {
+    return Array.from({ length }, () => Math.floor(Math.random() * 7) + 1);
+}
+
+const find = findYou(6);
+console.log(find);
+
+const arithmeticMean = find.reduce((q, o) => q + o, 0);
+
+const result = arithmeticMean / 6;
+
+ console.log(`среднее арифметическое: ${result}`);
 
