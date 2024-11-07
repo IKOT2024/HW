@@ -1,4 +1,4 @@
-// 2.6
+// // 2.6
 
 // 1
 const stopDigit = [1, 5, 4, 10, 0, 3];
@@ -78,7 +78,7 @@ const arrayOfNumbers = [9, 8, 7, 6, 5]; {
     (youHaveOneTry >= 5 &&  youHaveOneTry <= 9 ? alert('Угадал') : alert('Не угадал'))
     }
     console.log(arrayOfNumbers);
-    
+
 
 
 // другой способ решения задачи №7
@@ -187,4 +187,6 @@ const arithmeticMean = find.reduce((q, o) => q + o, 0);
 const result = arithmeticMean / 6;
 
  console.log(`среднее арифметическое: ${result}`);
+
+
 
