@@ -1,192 +1,120 @@
-// // 2.6
+2.7
 
-// 1
-const stopDigit = [1, 5, 4, 10, 0, 3];
-for(let i = 0; i < stopDigit.length; i++) {
-    if(stopDigit[i] == 0) break;
-    console.log(stopDigit[i]);
-}
+//1
 
-
-
-// вторая вариация решения задачи №1
-let arrayMassiv = [1, 5, 4, 10, 0, 3];
-let i = 0;
-
-while (i < arrayMassiv.length) {
-    if (arrayMassiv[i] === 10) {
-        console.log(arrayMassiv[i]);
-        break;
-    }
-    console.log(arrayMassiv[i]);
-    i++;
-}
-
-
+const convertToUppercase = 'js';
+const convertedToUppercase = convertToUppercase.toUpperCase();
+console.log(convertedToUppercase);
 
 //2
-let findValue = [1, 5, 4, 10, 0, 3];
 
-let itSeemsToWorkOut = findValue.includes(4);
+function acceptTheNumber(array, startStr) {
+    return array.filter((value) => { return value.toLowerCase().startsWith(startStr.toLowerCase()) });
 
-console.log(itSeemsToWorkOut);
+}
 
+console.log(acceptTheNumber(['михаил', 'милый', 'молоко', 'дрель', 'мама'], 'Ми'));
 
 
 //3
-const thirdTask = [1, 3, 5, 10, 20];
-const itsDifficultForMe = thirdTask.join(" ")
-console.log(itsDifficultForMe);
 
-
+const roundTheNumber = 32.58884;
+console.log(Math.round(roundTheNumber), Math.ceil(roundTheNumber), Math.floor(roundTheNumber));
 
 //4
-let numberFour = [];
 
-for (let i = 0; i < 3; i++) {
-    let row = [];
-    for (let j = 0; j < 3; j++) {
-        row.push(1);
-    }
-    numberFour.push(row);
-}
-console.log(numberFour);
+const findTheMinimumNumber = Math.min(52, 53, 49, 77, 21, 32);
+const findTheMaximumNumber = Math.max(52, 53, 49, 77, 21, 32);
+
+console.log(findTheMaximumNumber, findTheMinimumNumber);
 
 
 
 //5
-const doYouWantAnySupplements = [1, 1, 1];
-doYouWantAnySupplements.push(2, 2, 2);
-console.log(doYouWantAnySupplements);
+
+function nameNumber() {
+    console.log(Math.floor(Math.random() * 10) + 1);
+}
+nameNumber();
 
 
+//6
 
-// 6
-const sortingTheArray = [9, 8, 7, 'a', 6, 5]
-sortingTheArray.sort();
-console.log(sortingTheArray);
-const filtersortingTheArray = sortingTheArray.filter(sorting => sorting !== 'a');
-console.log(filtersortingTheArray);
+function generateRandomArray(number) {
 
-
-
-// 7
-
-const arrayOfNumbers = [9, 8, 7, 6, 5]; {
-    let youHaveOneTry = prompt("Угадайте число");
-    arrayOfNumbers.includes(9, 8, 7, 6, 5);
-    (youHaveOneTry >= 5 &&  youHaveOneTry <= 9 ? alert('Угадал') : alert('Не угадал'))
+    if (!Number.isInteger(number) || number < 0) {
+        throw new Error("Аргумент должен быть целым неотрицательным числом.");
     }
-    console.log(arrayOfNumbers);
 
+    const arrayLength = Math.floor(number / 2);
 
+    const randomArray = [];
+    for (let i = 0; i < arrayLength; i++) {
+        const randomNumber = Math.floor(Math.random() * (number + 1));
+        randomArray.push(randomNumber);
+    }
 
-// другой способ решения задачи №7
-let arr = [9, 8, 7, 6, 5];
-let userGuess = prompt("Угадайте число из массива");
-userGuess = Number(userGuess);
-if (arr.includes(userGuess)) {
-    alert("Угадал");
-} else {
-    alert("Не угадал");
-}
-console.log(userGuess)
-
-
-// 8
-const returnTheString = 'abcdef';
-const splitReturnTheString = returnTheString.split("");
-splitReturnTheString.reverse()
-console.log(splitReturnTheString);
-
-
-
-// 9
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
-const combinedArray = [...arr1, ...arr2];
-console.log(combinedArray);
-
-
-
-// 10 
-function generateRandomArray(length) {
-    return Array.from({ length }, () => Math.floor(Math.random() * 10) + 1);
+    return randomArray;
 }
 
-const array = generateRandomArray(10);
-console.log('Массив:', array);
+console.log(generateRandomArray(20))
 
-for (let i = 0; i < array.length; i++) {
-    const current = array[i];
-    const next = i < array.length - 1 ? array[i + 1] : 'Нет следующего элемента';
-    const sum = next !== 'Нет следующего элемента' ? current + next : current;
-    console.log(`Текущий элемент: ${current}, Следующий элемент: ${next}, Сумма: ${sum}`);
+
+//7
+
+function takeTwoIntegers(rays1, rays2) {
+    return Math.floor(Math.random() * (rays2 - rays1 + 1)) + rays1;
+}
+console.log(takeTwoIntegers(10, 20));
+
+//8
+
+let displayCurrentDate = new Date();
+console.log(displayCurrentDate);
+
+//9
+
+let currentDate = new Date()
+console.log(+currentDate);
+
+let seventyThreeDays = 73 * 24 * 60 * 60 * 1000;
+
+let searchDate = +currentDate + seventyThreeDays;
+
+let seventyThreeDaysAgo = new Date(searchDate);
+
+console.log(seventyThreeDaysAgo);
+
+
+
+//10 
+
+function formatDate(date) {
+  
+    const months = [
+        "января", "февраля", "марта", "апреля", "мая", "июня",
+        "июля", "августа", "сентября", "октября", "ноября", "декабря"
+    ];
+
+    const daysOfWeek = [
+        "воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"
+    ];
+
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    const dayOfWeek = daysOfWeek[date.getDay()];
+
+ 
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const seconds = date.getSeconds().toString().padStart(2, '0');
+
+    const formattedDate = `Дата: ${day} ${month} ${year} — это ${dayOfWeek}.`;
+    const formattedTime = `Время: ${hours}:${minutes}:${seconds}`;
+
+    return `${formattedDate}\n${formattedTime}`;
 }
 
-
-
-//11
-function arrayOfIntegralNumbers(will) {
-    return will.map(wil => wil ** 2);
-}
-
-const will = [1, 2, 6, 7, 12, 38];
-const myAnswer = arrayOfIntegralNumbers(will);
-
-console.log(myAnswer);
-
-
-
-// 12
-function arrayOfStrings (worlds) {
-    return worlds.map(world => world.length);
-}
-
-const worlds = ['I', 'finished', 'this', 'work', 'at', 'one', 'in', 'the', 'morning']
-const thisWork = arrayOfStrings(worlds);
-
-console.log(thisWork);
-
-
-
-// 13
-function filterNum(numb) {
-    return numb.filter( numb => numb < 0);
-}
-const numb = [1, -13, 3, -0.5, -11, 7, 0, 13, -9, -10];
-const terNum = filterNum(numb);
-
-console.log(terNum);
-
-
-
-// 14
-function findTheQuotient(length) {
-    return Array.from({ length }, () => Math.floor(Math.random() * 10) + 1);
-}
-
-const findThe = findTheQuotient(10)
-console.log( findThe);
-
-const filteredNumbers = findThe.filter(numbers1 => numbers1 % 2 === 0);
-console.log(`исходный массив: ${findThe}, массив с четными  числами: ${filteredNumbers}`);
-
-
-
-// 15
-function findYou(length) {
-    return Array.from({ length }, () => Math.floor(Math.random() * 7) + 1);
-}
-
-const find = findYou(6);
-console.log(find);
-
-const arithmeticMean = find.reduce((q, o) => q + o, 0);
-
-const result = arithmeticMean / 6;
-
- console.log(`среднее арифметическое: ${result}`);
-
-
-
+const date = new Date();
+console.log(formatDate(date));
