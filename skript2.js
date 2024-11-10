@@ -4,13 +4,13 @@ const randomNumber = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
 
 function checkGuess() {
-    
+
     const guess = parseInt(prompt("Введите число от 1 до 100:"));
 
-   
+
     if (isNaN(guess) || guess < 1 || guess > 100) {
         alert("Пожалуйста, введите корректное число от 1 до 100.");
-        checkGuess(); 
+        checkGuess();
         return;
     }
 
@@ -49,7 +49,7 @@ function generateTask() {
             break;
         case "-":
             num1 = getRandomNumber(1, 100);
-            num2 = getRandomNumber(1, num1); 
+            num2 = getRandomNumber(1, num1);
             task = `${num1} - ${num2}`;
             break;
         case "*":
@@ -60,7 +60,7 @@ function generateTask() {
         case "/":
             num1 = getRandomNumber(1, 100);
             num2 = getRandomNumber(1, 10);
-            num1 = num1 * num2; 
+            num1 = num1 * num2;
             task = `${num1} / ${num2}`;
             break;
     }
@@ -97,4 +97,55 @@ function checkAnswer() {
     } else {
         alert("Спасибо за игру!");
     }
+}
+
+
+// игра "Переверни текст"
+
+
+function reverseText(str) {
+    return str.split('').reverse().join('');
+}
+
+function startGame() {
+    const userInput = prompt("Введите текст для переворота:");
+    if (userInput !== null) {
+        const reversedText = reverseText(userInput);
+        alert(`Перевернутый текст: ${reversedText}`);
+    }
+}
+
+
+// игра "Викторина"
+
+
+const quiz = [
+    {
+        question: "Какой цвет небо?",
+        options: ["1. Красный", "2. Синий", "3. Зеленый"],
+        correctAnswer: 2 // номер правильного ответа
+    },
+    {
+        question: "Сколько дней в неделе?",
+        options: ["1. Шесть", "2. Семь", "3. Восемь"],
+        correctAnswer: 2
+    },
+    {
+        question: "Сколько у человека пальцев на одной руке?",
+        options: ["1. Четыре", "2. Пять", "3. Шесть"],
+        correctAnswer: 2
+    }
+];
+
+function startQuiz() {
+    let score = 0;
+
+    quiz.forEach((q, index) => {
+        const userAnswer = prompt(`Вопрос ${index + 1}: ${q.question}\n${q.options.join('\n')}`);
+        if (userAnswer !== null && parseInt(userAnswer) === q.correctAnswer) {
+            score++;
+        }
+    });
+
+    alert(`Викторина завершена!\nВаш результат: ${score} из ${quiz.length}`);
 }
