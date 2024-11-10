@@ -1,120 +1,80 @@
-2.7
+//2.8
 
 //1
 
-const convertToUppercase = 'js';
-const convertedToUppercase = convertToUppercase.toUpperCase();
-console.log(convertedToUppercase);
+const mort = [
+    { name: 'Глеб', age: 29 },
+    { name: 'Анна', age: 17 },
+    { name: 'Олег', age: 7 },
+    { name: 'Оксана', age: 47 }
+ ];
+
+ mort.sort((argumentOne, argumentTwo) => argumentOne.age - argumentTwo.age);
+ console.log(mort)
 
 //2
 
-function acceptTheNumber(array, startStr) {
-    return array.filter((value) => { return value.toLowerCase().startsWith(startStr.toLowerCase()) });
-
+function isPositive(number) {
+    return number > 0;
 }
+function isMale(person) {
+    return person.gender === 'male';
+}
+function filter(array, predicate) {
+    const result = [];
+    for (let i = 0; i < array.length; i++) {
+        if (predicate(array[i])) {
+            result.push(array[i]);
+        }
+    }
+    return result;
+}
+console.log(filter([3, -4, 1, 9], isPositive));
 
-console.log(acceptTheNumber(['михаил', 'милый', 'молоко', 'дрель', 'мама'], 'Ми'));
+const people = [
+    { name: 'Глеб', gender: 'male' },
+    { name: 'Анна', gender: 'female' },
+    { name: 'Олег', gender: 'male' },
+    { name: 'Оксана', gender: 'female' }
+];
 
+console.log(filter(people, isMale));
 
 //3
 
-const roundTheNumber = 32.58884;
-console.log(Math.round(roundTheNumber), Math.ceil(roundTheNumber), Math.floor(roundTheNumber));
+let CurrentDate = new Date();
+setInterval 
+let iDisplayTheCurrentDate = setInterval(() => console.log(`${CurrentDate}`), 3000);
+setTimeout(() => { clearInterval(iDisplayTheCurrentDate); console.log('30 секунд прошло'); }, 30000);
+
 
 //4
+function delayForSecond(callback) {
+    setTimeout(callback, 1000);
+   callback();
+}
 
-const findTheMinimumNumber = Math.min(52, 53, 49, 77, 21, 32);
-const findTheMaximumNumber = Math.max(52, 53, 49, 77, 21, 32);
-
-console.log(findTheMaximumNumber, findTheMinimumNumber);
-
-
+delayForSecond(function () {
+   console.log('Привет, Глеб!');
+})
 
 //5
 
-function nameNumber() {
-    console.log(Math.floor(Math.random() * 10) + 1);
-}
-nameNumber();
-
-
-//6
-
-function generateRandomArray(number) {
-
-    if (!Number.isInteger(number) || number < 0) {
-        throw new Error("Аргумент должен быть целым неотрицательным числом.");
-    }
-
-    const arrayLength = Math.floor(number / 2);
-
-    const randomArray = [];
-    for (let i = 0; i < arrayLength; i++) {
-        const randomNumber = Math.floor(Math.random() * (number + 1));
-        randomArray.push(randomNumber);
-    }
-
-    return randomArray;
+// Функция delayForSecond через 1 секунду пишет в консоль 
+// «Прошла одна секунда», а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) {  cb(); }
+    }, 1000)
 }
 
-console.log(generateRandomArray(20))
-
-
-//7
-
-function takeTwoIntegers(rays1, rays2) {
-    return Math.floor(Math.random() * (rays2 - rays1 + 1)) + rays1;
-}
-console.log(takeTwoIntegers(10, 20));
-
-//8
-
-let displayCurrentDate = new Date();
-console.log(displayCurrentDate);
-
-//9
-
-let currentDate = new Date()
-console.log(+currentDate);
-
-let seventyThreeDays = 73 * 24 * 60 * 60 * 1000;
-
-let searchDate = +currentDate + seventyThreeDays;
-
-let seventyThreeDaysAgo = new Date(searchDate);
-
-console.log(seventyThreeDaysAgo);
-
-
-
-//10 
-
-function formatDate(date) {
-  
-    const months = [
-        "января", "февраля", "марта", "апреля", "мая", "июня",
-        "июля", "августа", "сентября", "октября", "ноября", "декабря"
-    ];
-
-    const daysOfWeek = [
-        "воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"
-    ];
-
-    const day = date.getDate();
-    const month = months[date.getMonth()];
-    const year = date.getFullYear();
-    const dayOfWeek = daysOfWeek[date.getDay()];
-
- 
-    const hours = date.getHours().toString().padStart(2, '0');
-    const minutes = date.getMinutes().toString().padStart(2, '0');
-    const seconds = date.getSeconds().toString().padStart(2, '0');
-
-    const formattedDate = `Дата: ${day} ${month} ${year} — это ${dayOfWeek}.`;
-    const formattedTime = `Время: ${hours}:${minutes}:${seconds}`;
-
-    return `${formattedDate}\n${formattedTime}`;
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
 }
 
-const date = new Date();
-console.log(formatDate(date));
+// Код выше менять нельзя
+
+// Нужно изменить код ниже:
+delayForSecond(() => sayHi('Глеб'));
