@@ -51,7 +51,7 @@ setTimeout(() => { clearInterval(iDisplayTheCurrentDate); console.log('30 сек
 //4
 function delayForSecond(callback) {
     setTimeout(callback, 1000);
-   callback();
+   
 }
 
 delayForSecond(function () {
