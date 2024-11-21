@@ -1,80 +1,92 @@
-//2.8
+// Основы работы DOM
 
 //1
 
-const mort = [
-    { name: 'Глеб', age: 29 },
-    { name: 'Анна', age: 17 },
-    { name: 'Олег', age: 7 },
-    { name: 'Оксана', age: 47 }
- ];
+const titleEl = document.querySelector('.title');
+const btnEl = document.querySelector('.btn');
 
- mort.sort((argumentOne, argumentTwo) => argumentOne.age - argumentTwo.age);
- console.log(mort)
+
+btnEl.addEventListener('click', function () {
+
+if (titleEl.style.display === 'none') {
+
+    titleEl.style.display = 'block';
+    btnEl.textContent = 'Скрыть'
+} else {
+    titleEl.style.display = 'none';
+    btnEl.textContent = 'Показать'
+}
+
+});
+
 
 //2
 
-function isPositive(number) {
-    return number > 0;
-}
-function isMale(person) {
-    return person.gender === 'male';
-}
-function filter(array, predicate) {
-    const result = [];
-    for (let i = 0; i < array.length; i++) {
-        if (predicate(array[i])) {
-            result.push(array[i]);
-        }
-    }
-    return result;
-}
-console.log(filter([3, -4, 1, 9], isPositive));
+const text__paragEl = document.querySelector('.text__parag');
+const buttonEl = document.querySelector('.button');
 
-const people = [
-    { name: 'Глеб', gender: 'male' },
-    { name: 'Анна', gender: 'female' },
-    { name: 'Олег', gender: 'male' },
-    { name: 'Оксана', gender: 'female' }
-];
+buttonEl.addEventListener('click', () => {
+    text__paragEl.style.color = 'blue'
+})
 
-console.log(filter(people, isMale));
+//3 
 
-//3
 
-let CurrentDate = new Date();
-setInterval 
-let iDisplayTheCurrentDate = setInterval(() => console.log(`${CurrentDate}`), 3000);
-setTimeout(() => { clearInterval(iDisplayTheCurrentDate); console.log('30 секунд прошло'); }, 30000);
+const textEl = document.querySelector('.text');
+const butEl = document.querySelector('.but');
+
+butEl.addEventListener('click', () => {
+    textEl.textContent = 'Привет, мир!' 
+})
+
 
 
 //4
-function delayForSecond(callback) {
-    setTimeout(callback, 1000);
-   
-}
 
-delayForSecond(function () {
-   console.log('Привет, Глеб!');
+
+const elements = document.querySelectorAll('.description');
+
+elements.forEach(element => {
+    element.textContent = 'Измененный текст'
 })
+
 
 //5
 
-// Функция delayForSecond через 1 секунду пишет в консоль 
-// «Прошла одна секунда», а затем вызывает переданный колбэк
-function delayForSecond(cb) {
-    setTimeout(() => {
-        console.log('Прошла одна секунда');
-        if(cb) {  cb(); }
-    }, 1000)
-}
+const descriptionClass = document.querySelectorAll('.description2');
+const arg = document.querySelector('.arg');
+const parag1 = document.querySelector('parag');
 
-// Функция sayHi выводит в консоль приветствие для указанного имени
-function sayHi (name) {
-    console.log(`Привет, ${name}!`);
-}
+descriptionClass.forEach(el => {
+    el.textContent = 'Новый текст'
+})
 
-// Код выше менять нельзя
+//6
 
-// Нужно изменить код ниже:
-delayForSecond(() => sayHi('Глеб'));
+
+const paragEl = document.querySelector('.parag');
+const but2El = document.querySelector('.but2');
+
+but2El.addEventListener('click', () => {
+    const newParagEl = document.createElement('h2');
+    newParagEl.textContent = 'Новый абзац';
+    newParagEl.classList.add('newParag');
+    paragEl.appendChild(newParagEl);
+})
+
+//7
+
+const btnremoveEl = document.querySelector('.btnremove');
+const description3El = document.querySelector('.description3');
+const twoEl = document.querySelector('.two');
+const threeEl = document.querySelector('.three');
+const fourEl = document.querySelector('.four');
+const faveEl = document.querySelector('.fave');
+
+
+
+
+btnremoveEl.addEventListener('click', function (e) {
+    const description3El = document.querySelector('.description3');
+    description3El.remove();
+})
