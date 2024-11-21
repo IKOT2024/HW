@@ -149,3 +149,49 @@ function startQuiz() {
 
     alert(`Викторина завершена!\nВаш результат: ${score} из ${quiz.length}`);
 }
+
+// игра "Камень, Ножницы, Бумага"
+
+function getUserChoice() {
+    let userChoice;
+    do {
+        userChoice = prompt('Выберите: камень, ножницы или бумага').toLowerCase();
+    } while (!['камень', 'ножницы', 'бумага'].includes(userChoice));
+    return userChoice;
+}
+
+function getComputerChoice() {
+    const choices = ["камень", "ножницы", "бумага"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
+}
+
+
+function determineWinner(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+        return 'Ничья';
+    }
+
+    const rules = {
+        'камень': 'ножницы',
+        'ножницы': 'бумага',
+        'бумага': 'камень'
+    };
+
+    if (rules[userChoice] === computerChoice) {
+        return 'Победа';
+    } else {
+        return 'Поражение';
+    }
+}
+
+function playGame() {
+    const userChoice = getUserChoice();
+    const computerChoice = getComputerChoice();
+    const result = determineWinner(userChoice, computerChoice);
+
+    alert(`Ваш выбор: ${userChoice}`);
+    alert(`Выбор компьютера: ${computerChoice}`);
+    alert(`Результат: ${result}`);
+}
+
