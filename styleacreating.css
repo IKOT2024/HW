@@ -13,7 +13,6 @@ html {
 }
 
 .top {
-  max-width: 1440px;
   height: 800px;
   background-image: url(pictures__to__create__a__style/picture__for__the__site1.jpeg);
   background-repeat: no-repeat;
@@ -34,7 +33,6 @@ html {
 
 .star__one {
   background-image: url(pictures__to__create__a__style/Star__one.png);
-  /* Star 5 */
   position: absolute;
   width: 37px;
   height: 37px;
@@ -110,11 +108,11 @@ html {
   padding-top: 24px;
   border-radius: 60px;
   text-decoration: none;
-  width: 247px;
-  height: 66px;
   transition: 0.5s;
 }
 .header__button__link {
+  width: 247px;
+  height: 66px;
   padding: 16px;
   display: flex;
   justify-content: center;
@@ -513,12 +511,12 @@ html {
 .games__button__form {
   border-radius: 60px;
   text-decoration: none;
-  width: 247px;
-  height: 66px;
   transition: 0.5s;
   border-radius: 30px;
 }
 .games__button__link {
+  width: 247px;
+  height: 66px;
   padding: 16px;
   display: flex;
   justify-content: center;
@@ -583,13 +581,13 @@ html {
 .games2__button__form {
   border-radius: 60px;
   text-decoration: none;
-  width: 247px;
-  height: 66px;
   transition: 0.5s;
   padding-top: 24px;
   border-radius: 30px;
 }
 .games2__button__link {
+  width: 247px;
+  height: 66px;
   padding: 16px;
   display: flex;
   justify-content: center;
@@ -655,14 +653,14 @@ html {
 .games3__button__form {
   border-radius: 60px;
   text-decoration: none;
-  width: 247px;
-  height: 66px;
   transition: 0.5s;
   padding-top: 24px;
   border-radius: 30px;
   padding-top: 32px;
 }
 .games3__button__link {
+  width: 247px;
+  height: 66px;
   padding: 16px;
   display: flex;
   justify-content: center;
@@ -709,14 +707,14 @@ html {
 .games4__button__form {
   border-radius: 60px;
   text-decoration: none;
-  width: 247px;
-  height: 66px;
   transition: 0.5s;
   padding-top: 24px;
   border-radius: 30px;
   padding-top: 32px;
 }
 .games4__button__link {
+  width: 247px;
+  height: 66px;
   padding: 16px;
   display: flex;
   justify-content: center;
@@ -775,14 +773,14 @@ html {
 .games5__button__form {
   border-radius: 60px;
   text-decoration: none;
-  width: 247px;
-  height: 66px;
   transition: 0.5s;
   padding-top: 24px;
   border-radius: 30px;
   padding-top: 32px;
 }
 .games5__button__link {
+  width: 247px;
+  height: 66px;
   padding: 16px;
   display: flex;
   justify-content: center;
@@ -851,14 +849,14 @@ html {
 .games6__button__form {
   border-radius: 60px;
   text-decoration: none;
-  width: 247px;
-  height: 66px;
   transition: 0.5s;
   padding-top: 24px;
   border-radius: 30px;
   padding-top: 32px;
 }
 .games6__button__link {
+  width: 247px;
+  height: 66px;
   padding: 16px;
   display: flex;
   justify-content: center;

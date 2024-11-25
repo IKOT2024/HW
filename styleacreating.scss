@@ -14,7 +14,6 @@ html {
 
 
 .top {
-    max-width: 1440px;
     height: 800px;
     background-image: url(pictures__to__create__a__style/picture__for__the__site1.jpeg);
     background-repeat: no-repeat;
@@ -37,7 +36,6 @@ html {
 
 .star__one {
     background-image: url(pictures__to__create__a__style/Star__one.png);
-    /* Star 5 */
     position: absolute;
     width: 37px;
     height: 37px;
@@ -120,13 +118,13 @@ html {
         padding-top: 24px;
         border-radius: 60px;
         text-decoration: none;
-        width: 247px;
-        height: 66px;
         transition: 0.5s;
 
     }
 
     &__button__link {
+        width: 247px;
+        height: 66px;
         padding: 16px;
         display: flex;
         justify-content: center;
@@ -612,14 +610,15 @@ html {
     &__button__form {
         border-radius: 60px;
         text-decoration: none;
-        width: 247px;
-        height: 66px;
+       
         transition: 0.5s;
 
         border-radius: 30px;
     }
 
     &__button__link {
+        width: 247px;
+        height: 66px;
         padding: 16px;
         display: flex;
         justify-content: center;
@@ -698,14 +697,14 @@ html {
     &__button__form {
         border-radius: 60px;
         text-decoration: none;
-        width: 247px;
-        height: 66px;
         transition: 0.5s;
         padding-top: 24px;
         border-radius: 30px;
     }
 
     &__button__link {
+        width: 247px;
+        height: 66px;
         padding: 16px;
         display: flex;
         justify-content: center;
@@ -783,8 +782,6 @@ html {
     &__button__form {
         border-radius: 60px;
         text-decoration: none;
-        width: 247px;
-        height: 66px;
         transition: 0.5s;
         padding-top: 24px;
         border-radius: 30px;
@@ -792,6 +789,8 @@ html {
     }
 
     &__button__link {
+        width: 247px;
+        height: 66px;
         padding: 16px;
         display: flex;
         justify-content: center;
@@ -844,8 +843,6 @@ html {
     &__button__form {
         border-radius: 60px;
         text-decoration: none;
-        width: 247px;
-        height: 66px;
         transition: 0.5s;
         padding-top: 24px;
         border-radius: 30px;
@@ -853,6 +850,8 @@ html {
     }
 
     &__button__link {
+        width: 247px;
+        height: 66px;
         padding: 16px;
         display: flex;
         justify-content: center;
@@ -918,8 +917,6 @@ html {
     &__button__form {
         border-radius: 60px;
         text-decoration: none;
-        width: 247px;
-        height: 66px;
         transition: 0.5s;
         padding-top: 24px;
         border-radius: 30px;
@@ -927,6 +924,8 @@ html {
     }
 
     &__button__link {
+        width: 247px;
+        height: 66px;
         padding: 16px;
         display: flex;
         justify-content: center;
@@ -1005,8 +1004,6 @@ html {
     &__button__form {
         border-radius: 60px;
         text-decoration: none;
-        width: 247px;
-        height: 66px;
         transition: 0.5s;
         padding-top: 24px;
         border-radius: 30px;
@@ -1014,6 +1011,8 @@ html {
     }
 
     &__button__link {
+        width: 247px;
+        height: 66px;
         padding: 16px;
         display: flex;
         justify-content: center;
@@ -1062,5 +1061,4 @@ html {
     }
 }
 
-
-@import 'mobil.skypro';
+@import'mobil.skypro';
